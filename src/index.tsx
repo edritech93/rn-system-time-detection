@@ -17,6 +17,18 @@ const RnSystemTimeDetection = NativeModules.RnSystemTimeDetection
       }
     );
 
-export function multiply(a: number, b: number): Promise<number> {
-  return RnSystemTimeDetection.multiply(a, b);
+export function checkTime(): Promise<boolean> {
+  if (Platform.OS === 'ios') {
+    return Promise.resolve(true);
+  } else {
+    return RnSystemTimeDetection.checkTime();
+  }
+}
+
+export function checkZone(): Promise<boolean> {
+  if (Platform.OS === 'ios') {
+    return Promise.resolve(true);
+  } else {
+    return RnSystemTimeDetection.checkZone();
+  }
 }

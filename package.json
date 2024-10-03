@@ -1,5 +1,5 @@
 {
-  "name": "rn-system-time-detection",
+  "name": "@edritech93/rn-system-time-detection",
   "version": "0.1.0",
   "description": "detect system time and timezone for android",
   "source": "./src/index.tsx",
